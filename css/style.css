@@ -1,17 +1,103 @@
 body {
-    background-color: rgb(202, 222, 244) !important;
+    background-color: #f3f8ff !important;
 }
 
 header {
-    background-color: #666;
+    background-color: #c2dcff;
     padding: 30px;
-    text-align: center;
+    text-align: left;
     font-size: 35px;
     color: white;
+    font-family: "Alexandria", sans-serif;
 }
 
 section {
     background-color:aliceblue;
 }
+
+aside {
+    width: 50%
+    padding-left 15px;
+    margin-left: 15px;
+    float: right;
+    font-style: italic;
+    background-color: lightgray;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    /*border: 1px solid #ccc;*/
+    border-top: none;
+  }
+  
+  .carousel-container {
+      width: 100%;
+      overflow: hidden; /* Clips the overflow content */
+      white-space: nowrap;
+  }
+  
+  .imagecarousel {
+      display: flex;
+      width: fit-content; /* Ensures the container is wide enough for all images */
+      /* Animation properties */
+      animation: bannermove 18s linear infinite; /* Adjust duration (e.g., 10s) to control speed */
+  }
+  
+  .imagecarousel img {
+      /* Set a consistent size for images */
+      height: 200px; 
+      width: auto;
+      margin-right: 10px; /* Space between images */
+      flex-shrink: 0; /* Prevents images from shrinking */
+  }
+  
+  @keyframes bannermove {
+      0% {
+          transform: translateX(0);
+      }
+      100% {
+          /* Moves the entire width of the original set of images */
+          transform: translateX(-50%); 
+      }
+  }
+  
+  /* Pause animation on hover */
+  .imagecarousel:hover {
+      animation-play-state: paused;
+  }
+  
+
+
 
 

@@ -4,18 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Aileen's senior project 2026</title>
+    <title>Notevana</title>
 </head>
 <body>
     <header>
-        <h1> senopr project yuh </h1>
+        <div class="tab">
+            <button class="tablinks"> <a href="index.html" target="_blank" class="tablinks">Homepage</a></button>
+            <!--<button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Homepage</button>-->
+            <button class="tablinks"> <a href="uploads.html" target="blank" class="tablinks">Uploads</button>
+            <button class="tablinks"> <a href="users.html" target="blank" class="tablinks">Users</button>
+        </div>
+        
+        
+    <h1> Notevana </h1>
+    <h3>Home Page</h3>
     </header>
-    <section>
-        <h1>how old are you?</h1>
-        <h2><i>im four years old!</i></h2>
-        <h1>WOW you are the youngest person <i><b>EVER</b></i></h1>
-    </section>
-    <p title> this is pratice for a paragraph title</p>
-    <p>this means that blah blah blah once upon a time in a nursery rhyme yada yada</p>
+      
+      <div id="Homepage" class="tabcontent">
+        <h3>London</h3>
+        <p>London is the capital city of England.</p>
+        
+        <div class="carousel-container">
+              <!-- The images will be in the 'imagecarousel' div -->
+              <div class="imagecarousel">
+                  <!-- Original images -->
+                  <img src="https://images.stockcake.com/public/8/8/9/889c1161-ac90-403a-b63f-23d708e67520_large/sunset-mountain-landscape-stockcake.jpg" alt="Image 1" />
+                  <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?cs=srgb&dl=pexels-souvenirpixels-417074.jpg&fm=jpg" alt="Image 2" />
+                  <img src="https://www.printique.com/wp-content/uploads/2016/10/photography-landscape-adoramapix.jpg?width=650" alt="Image 3" />
+                  <!-- Duplicated images for seamless looping -->
+                  <img src="https://images.stockcake.com/public/8/8/9/889c1161-ac90-403a-b63f-23d708e67520_large/sunset-mountain-landscape-stockcake.jpg" alt="Image 1" />
+                  <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?cs=srgb&dl=pexels-souvenirpixels-417074.jpg&fm=jpg" alt="Image 2" />
+                  <img src="https://www.printique.com/wp-content/uploads/2016/10/photography-landscape-adoramapix.jpg?width=650" alt="Image 3" />
+              </div>
+          </div>
+      </div>
+      
+     <!-- 
+      <div id="Paris" class="tabcontent">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p> 
+      </div>
+      
+      <div id="Tokyo" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
+    -->
+
+
+      <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+      </script>
+      
+    
 </body>
 </html>
