@@ -4,7 +4,7 @@ body {
 
 header {
     background-color: #c2dcff;
-    padding: 30px;
+    padding: 30px;                             /*one of these uses the color aliceblue, just keep that in mind*/
     text-align: left;
     font-size: 35px;
     color: white;
@@ -12,8 +12,17 @@ header {
 }
 
 section {
-    background-color:aliceblue;
+    background-color: #c2dcff;
+    text-align: left;
+    border-radius: 15px; /* adjust the pixel value for more or less rounding */
+    width: 300px; 
+    height: 70px; 
+    padding: 5px;
+    float: right;
+
 }
+
+
 
 aside {
     width: 50%
@@ -96,6 +105,7 @@ aside {
   .imagecarousel:hover {
       animation-play-state: paused;
   }
+
   
 
 
