@@ -85,7 +85,7 @@ aside {
   
   .imagecarousel img {
       /* Set a consistent size for images */
-      height: 200px; 
+      height: 350px; 
       width: auto;
       margin-right: 10px; /* Space between images */
       flex-shrink: 0; /* Prevents images from shrinking */
