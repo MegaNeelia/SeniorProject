@@ -9,7 +9,7 @@ body, html {
 
 .tabs-nav {
     display: flex;
-    background: #2c3e50;    /*space behind the tabs*/
+    background: #ffffff;    /*space behind the tabs*/
     padding: 15px 20px 0 20px;
 }
 
@@ -17,7 +17,7 @@ body, html {
     padding: 12px 35px;
     cursor: pointer;
     background: #c2dcff;
-    color: white;
+    color: black;                    /*the color of the text on the tab*/
     margin-right: -10px;
     font-weight: bold;
     clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
@@ -48,16 +48,16 @@ input[type="radio"] {   /*hides the lil round buttons from the top*/
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: white;
+    justify-content: center;         
+    color: black;           /*color of the text inside the page*/
 }
 
-#page1 {background: #3498db;} 
-#page2 {background: #9b59b6;}
-#page3 {background: #1abc9c;}
+#page1 {background: #c2dcff;} 
+#page2 {background: #f3f8ff;}
+#page3 {background: #f3f8ff;}
 
-#t1:checked ~ .tabs-nav label[for="t1"] { background: #3498db; z-index: 2; }
-#t2:checked ~ .tabs-nav label[for="t2"] { background: #9b59b6; z-index: 2; }      /* page colors AFTER theyre clicked*/
+#t1:checked ~ .tabs-nav label[for="t1"] { background: #c2dcff; z-index: 2; }
+#t2:checked ~ .tabs-nav label[for="t2"] { background: #9b59b6; z-index: 2; }      /* tab colors*/
 #t3:checked ~ .tabs-nav label[for="t3"] { background: #1abc9c; z-index: 2; }
 
 #t1:checked ~ .window .film-strip { transform: translateX(0); }
@@ -65,6 +65,10 @@ input[type="radio"] {   /*hides the lil round buttons from the top*/
 #t3:checked ~ .window .film-strip { transform: translateX(-200vw); }
 
 
+
+h1 {
+    text-align: left;
+}
 
 header {
     background-color: #c2dcff;
@@ -97,18 +101,19 @@ aside {
     background-color: lightgray;
 }
 
-/* Style the tab */
+
+/*
+
 .tab {
     overflow: hidden;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc;   //styles the tab
     background-color: #f1f1f1;
   }
   
-  /* Style the buttons inside the tab */
   .tab button {
     background-color: inherit;
     float: left;
-    border: none;
+    border: none;                          //style the buttons inside the tab
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
@@ -116,24 +121,23 @@ aside {
     font-size: 17px;
   }
   
-  /* Change background color of buttons on hover */
   .tab button:hover {
-    background-color: #ddd;
+    background-color: #ddd;              //changes the color of button when hovering
   }
   
-  /* Create an active/current tablink class */
   .tab button.active {
-    background-color: #ccc;
+    background-color: #ccc;                     //create an actuve current tablink class
   }
   
-  /* Style the tab content */
+                   //this styles the tab content
   .tabcontent {
     display: none;
     padding: 6px 12px;
-    /*border: 1px solid #ccc;*/
-    border-top: none;
+    border-top: none;                //border:1px solid
   }
   
+*/
+
   .carousel-container {
       width: 100%;
       overflow: hidden; /* Clips the overflow content */
