@@ -47,7 +47,8 @@ input[type="radio"] {   /*hides the lil round buttons from the top*/
     width: 100vw;
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
     justify-content: center;         
     color: black;           /*color of the text inside the page*/
 }
@@ -142,6 +143,9 @@ aside {
       width: 100%;
       overflow: hidden; /* Clips the overflow content */
       white-space: nowrap;
+      display: block;
+      clear: both;
+      margin-top: 20px;
   }
   
   .imagecarousel {
