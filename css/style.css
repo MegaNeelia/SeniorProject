@@ -1,3 +1,7 @@
+@import url('https://googleapis.com');
+
+
+
 body, html {
     background-color: #f3f8ff !important;
     margin: 0;
@@ -80,17 +84,48 @@ header {
     font-family: "Alexandria", sans-serif;
 }
 
-section {
+.info-container {
+    display: flex;
+    flex-direction: column;  /*creates vertical slab*/
+    gap: 10px; /*gap between each box*/
+    align-items: flex-start;
+    float: right;
+}
+
+
+.info-boxes {
     background-color: #c2dcff;
     text-align: left;
     border-radius: 15px; /* adjust the pixel value for more or less rounding */
     width: 300px; 
-    height: 70px; 
+    height: auto;
+    min-height: 70px; 
     padding: 5px;
-    float: right;
+    margin-right: 100px
+
+    
 
 }
 
+.input-area {
+    min-height: 20px;
+    background: transparent;
+    width: 100%;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+.info-boxes label {
+    font-family: Alexandria, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    display: block;
+    margin-top: 5px;
+}
 
 
 aside {
@@ -100,6 +135,24 @@ aside {
     float: right;
     font-style: italic;
     background-color: lightgray;
+}
+
+.hero {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+#drop-area {
+    width: 500px;
+    height: 300px;
+    padding: 30px;
+    background: #fff;
+    text-align: center;
+    border-radius: 20px;
+    margin-left: 50px;
 }
 
 
