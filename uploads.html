@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<!--tab code starts here-->
+
     <input type ="radio" name="folder" id="t1" checked>
     <input type="radio" name="folder" id="t2">
     <input type="radio" name="folder" id="t3">
@@ -26,12 +28,16 @@
       </label>
     </nav>
 
+<!--tab code ends here-->
+
+<!--drag and drop code starts here-->
+
 
     <br>
 <section>
     <div class="hero">
         <label for="input-file" id="drop-area">
-            <input type="file" accept ="image/*" id="input-file" hidden>
+            <input type="file" accept ="image/*" id="input-file" multiple hidden>
             <div id="img-view">
                 <img src="c:\Users\mejia732\Pictures\9497842.png">
                 <p>Drag and drop or click here <br> to upload image</p>
@@ -40,7 +46,16 @@
         </label>
     </div>
     <script src="script.js"></script>
+
+    <div id="thumbnail-gallery"></div>
+
+    <button id="submit-btn">Upload</button>
 </section>
+
+<!--drag and drop code ends here-->
+
+
+<!--after this is where the code for the info boxes start-->
     
 <div class="info-container">
     <div class="info-boxes">
