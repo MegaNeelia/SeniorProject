@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Uploads Page",
+            "type": "editor-browser", 
+            "request": "launch",
+            "file": "${workspaceFolder}/uploads.html"
+        }
+    ]
+}

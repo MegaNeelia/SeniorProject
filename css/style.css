@@ -207,6 +207,15 @@ aside {
 
 #submit-btn {
     display: block;
+    width: 300px;
+    padding: 15px;
+    margin: 30px auto;
+    background-color: #c2dcff;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer; 
+
 }
 
 
