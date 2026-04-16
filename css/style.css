@@ -20,14 +20,40 @@ body, html {
 .tab-btn {                    /*the actual folder shape*/
     padding: 12px 35px;
     cursor: pointer;
-    background: #c2dcff;
+    background-color: #f3f8ff;
     color: black;                    /*the color of the text on the tab*/
     margin-right: -10px;
     font-weight: bold;
+    text-decoration: none;
     clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
     transition: all 0.3s ease;
     position: relative;
     z-index: 1;
+}
+
+.tab-btn.active {
+    background-color: #c2dcff;
+    font-weight: bold;
+}
+
+.hero-section {
+    padding: 20px 40px 20px 40px;
+    text-align: left;
+    max-width: 800px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #333;
+    max-width: 600px;
 }
 
 input[type="radio"] {   /*hides the lil round buttons from the top*/
@@ -57,18 +83,32 @@ input[type="radio"] {   /*hides the lil round buttons from the top*/
     color: black;           /*color of the text inside the page*/
 }
 
+/*
 #page1 {background: #c2dcff;} 
 #page2 {background: #f3f8ff;}
 #page3 {background: #f3f8ff;}
+*/
 
-#t1:checked ~ .tabs-nav label[for="t1"] { background: #c2dcff; z-index: 2; }
-#t2:checked ~ .tabs-nav label[for="t2"] { background: #9b59b6; z-index: 2; }      /* tab colors*/
-#t3:checked ~ .tabs-nav label[for="t3"] { background: #1abc9c; z-index: 2; }
+.tabs-nav label {
+    background-color: #f3f8ff !important;
+    color: #555;
+    z-index: 1;
+}
 
+#t1:checked ~ .tabs-nav label[for="t1"] /*{ background: #c2dcff; z-index: 2; }*/
+#t2:checked ~ .tabs-nav label[for="t2"] /*{ background: #9b59b6; z-index: 2; }   */   /* tab colors*/
+#t3:checked ~ .tabs-nav label[for="t3"] {  /*{ background: #1abc9c; z-index: 2; }*/
+    background-color: #c2dcff !important;
+    color: #000;
+    z-index: 5;
+    font-weight: bold;
+}
+
+/*
 #t1:checked ~ .window .film-strip { transform: translateX(0); }
 #t2:checked ~ .window .film-strip { transform: translateX(-100vw); }
 #t3:checked ~ .window .film-strip { transform: translateX(-200vw); }
-
+*/
 
 
 h1 {
@@ -289,11 +329,11 @@ aside {
       }
   }
   
-  /* Pause animation on hover */
+  /* Pause animation on hover 
   .imagecarousel:hover {
       animation-play-state: paused;
   }
-
+  */
 
   
 
