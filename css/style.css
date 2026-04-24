@@ -152,9 +152,6 @@ header {
     min-height: 70px; 
     padding: 5px;
     margin-right: 100px
-
-    
-
 }
 
 .file-boxes {
@@ -167,7 +164,8 @@ header {
     min-height: 100px;
     padding: 5px;
     margin-left: 100px;
-
+    position: fixed;
+    left: 0;
 }
 
 .input-area {
