@@ -159,11 +159,11 @@ header {
     right: 20px;
     text-align: left;
     border-radius: 15px;
-    width: 100px;
+    width: 500px;
     height: auto;
     min-height: 100px;
     padding: 5px;
-    margin-left: 100px;
+    margin-left: 200px;
     position: fixed;
     left: 0;
 }
