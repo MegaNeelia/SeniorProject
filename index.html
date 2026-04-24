@@ -33,6 +33,22 @@
   const analytics = getAnalytics(app);
 </script>
     
+
+<!-- Upload Section -->
+<input type="file" id="noteFile" accept=".pdf,.doc,.docx,.txt">
+<button onclick="uploadNote()">Upload Note</button>
+
+<!-- Display Section -->
+<div id="notesList">
+  <h3>Shared Notes</h3>
+  <ul id="listItems"></ul>
+</div>
+
+<!-- Firebase SDKs (Add these before your own script) -->
+<script src="https://gstatic.com"></script>
+<script src="https://gstatic.com"></script>
+<script src="https://gstatic.com"></script>
+
   
    
 <!--
