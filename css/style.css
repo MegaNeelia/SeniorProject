@@ -163,9 +163,32 @@ header {
     height: auto;
     min-height: 100px;
     padding: 5px;
-    margin-left: 200px;
+    margin-left: 230px;
     position: fixed;
     left: 0;
+}
+
+.uploaded-boxes {
+    background-color: #bbb5ff;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    padding: 5px;
+    margin-left: 100px;
+    /*overflow: hidden;*/
+}
+
+.uploaded-boxes img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    transform-origin: top left;
+}
+
+.uploaded-boxes:hover img {
+    transform: scale(5.5);
 }
 
 .input-area {
