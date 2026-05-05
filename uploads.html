@@ -54,7 +54,8 @@
 
 
 <!--after this is where the code for the info boxes start-->
-    
+ 
+<!--
 <div class="info-container">
     <div class="info-boxes">
         <label>Title:</label>
@@ -71,13 +72,33 @@
 
 
         <br>
-    <div class="info-boxes">
+    <div class="info-boxes">bu
         <label>Description: </label>
         <div class="input-area" contenteditable="true"></div>
         
     </div>
 
+</div>
+-->
+
+<div class="info-container">
+    <div class="info-boxes">
+        <label>Title:</label>
+        <!-- Standard inputs are easier to read with JS than contenteditable divs -->
+        <input type="text" id="titleInput" class="input-area">
     </div>
+    <br>
+    <div class="info-boxes">
+        <label>Class Name:</label>
+        <input type="text" id="classInput" class="input-area">
+    </div>
+    <br>
+    <div class="info-boxes">
+        <label>Description:</label>
+        <textarea id="descInput" class="input-area"></textarea>
+    </div>
+</div>
+
 </div>
 
 
