@@ -299,12 +299,11 @@ inputFile.addEventListener("change", () => {
 
 // --- 2. THE UPLOAD LOGIC ---
 document.getElementById("submit-btn").onclick = async () => {
-    // Grab text from your info-boxes
     const title = document.getElementById('titleInput').value;
     const className = document.getElementById('classInput').value;
     const description = document.getElementById('descInput').value;
 
-    if (!selectedFile) return alert("Please select a JPEG image first!");
+    if (!selectedFile) return alert("Please select an image first!");
 
     try {
         document.getElementById("submit-btn").innerText = "Uploading...";
@@ -312,12 +311,10 @@ document.getElementById("submit-btn").onclick = async () => {
         const formData = new FormData();
         formData.append('file', selectedFile); 
         formData.append('upload_preset', uploadPreset);
-        
-        // This attaches your text directly to the file in Cloudinary
         formData.append('context', `title=${title}|class=${className}|desc=${description}`);
-        formData.append('tags', 'senior_project_notes'); 
 
-        const response = await fetch(`https://cloudinary.com{cloudName}/image/upload`, {
+        // FIX: The URL needs "api.cloudinary.com" and the "v1_1" part
+        const response = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
             method: 'POST',
             body: formData
         });
@@ -325,20 +322,57 @@ document.getElementById("submit-btn").onclick = async () => {
         const data = await response.json();
         
         if (data.secure_url) {
+            // --- NEW: SAVE TO LOCALSTORAGE ---
+            const newNote = {
+                url: data.secure_url,
+                title: title,
+                className: className,
+                description: description
+            };
+
+            // Get old notes, add the new one, and save back
+            const allNotes = JSON.parse(localStorage.getItem('myNotes')) || [];
+            allNotes.push(newNote);
+            localStorage.setItem('myNotes', JSON.stringify(allNotes));
+
             alert("Upload Successful!");
-            window.location.href = "files.html"; // Send them to the gallery
+            window.location.href = "files.html"; 
         } else {
             alert("Upload failed: " + data.error.message);
         }
 
     } catch (e) {
         console.error("Error:", e);
-        alert("Something went wrong. Check your internet or Cloudinary settings.");
+        alert("Something went wrong.");
     } finally {
         document.getElementById("submit-btn").innerText = "Upload";
     }
 };
 
+document.addEventListener("DOMContentLoaded", () => {
+    const grid = document.getElementById("files-grid");
+    // Get the notes we saved in uploads.html
+    const savedNotes = JSON.parse(localStorage.getItem('myNotes')) || [];
 
+    if (savedNotes.length === 0) {
+        grid.innerHTML = "<h3>No notes uploaded yet.</h3>";
+        return;
+    }
 
-
+    // Loop through each note and create the HTML structure
+    savedNotes.forEach(note => {
+        const card = document.createElement("div");
+        card.className = "file-card"; // Use your CSS class name here
+        
+        card.innerHTML = `
+            <img src="${note.url}" alt="Note Image">
+            <div class="card-content">
+                <h3>${note.title}</h3>
+                <p><strong>Class:</strong> ${note.className}</p>
+                <p>${note.description}</p>
+            </div>
+        `;
+        
+        grid.appendChild(card);
+    });
+});

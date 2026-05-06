@@ -43,6 +43,36 @@ body.active-page {
     background-color: #f3f8ff !important;
 }
 
+.active-page {
+    overflow-y: auto !important;
+    height: auto !important;
+}
+
+.notes-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.note-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;    
+}
+
+.note-details {
+    flex-grow: 1;
+    position: relative;
+    margin-left: 0;
+    width: auto;
+    min-height: 150px;
+}
+
 .hero-section {
     padding: 20px 40px 20px 40px;
     text-align: left;
@@ -183,11 +213,16 @@ header {
 }
 
 .uploaded-boxes img {
+    border: 2px solid #c2dcff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+    /*
     width: 150px;
     height: 150px;
     object-fit: cover;
     transition: transform 0.5s ease;
     transform-origin: top left;
+    */
 }
 
 .uploaded-boxes:hover img {
